@@ -1,0 +1,9 @@
+Model,Cut-off,Threshold,Precision,Recall,F1,Accuracy,Cost per 100 cases,TP,FP,FN,TN
+Decision Tree,Default,0.5,0.786,0.629,0.698,0.75,76.316,22,6,13,35
+Decision Tree,Tuned,0.19,0.596,0.8,0.683,0.658,61.842,28,19,7,22
+Naive Bayes,Default,0.5,0.833,0.714,0.769,0.803,59.211,25,5,10,36
+Naive Bayes,Tuned,0.12,0.707,0.829,0.763,0.763,47.368,29,12,6,29
+Random Forest,Default,0.5,0.852,0.657,0.742,0.789,68.421,23,4,12,37
+Random Forest,Tuned,0.28,0.633,0.886,0.738,0.711,44.737,31,18,4,23
+Always healthy,Default,0.5,0.0,0.0,0.0,0.539,184.211,0,0,35,41
+Always healthy,Tuned,0.02,0.0,0.0,0.0,0.539,184.211,0,0,35,41

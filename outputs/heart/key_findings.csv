@@ -1,0 +1,12 @@
+Finding
+Naive Bayes scores ROC-AUC 0.864 on the test set (95% interval 0.778 to 0.936); the baseline that ignores the inputs (Always healthy) scores 0.500.
+Naive Bayes against Decision Tree on right or wrong answers (McNemar): could be chance (p = 0.455).
+Naive Bayes against Random Forest on right or wrong answers (McNemar): could be chance (p = 1.000).
+Naive Bayes against Always healthy on right or wrong answers (McNemar): real difference (p = 0.000).
+"Decision Tree generalises well: training and validation roc auc are close (+0.051); validation is still rising, so more data would likely help."
+"Naive Bayes generalises well: training and validation roc auc are close (+0.013); validation has levelled off, so more data alone would help little."
+"Random Forest generalises well: training and validation roc auc are close (+0.040); validation has levelled off, so more data alone would help little."
+"Cut-off for Naive Bayes: 0.12 instead of 0.5, chosen for the lowest cost. On the test set: recall 0.71 to 0.83, precision 0.83 to 0.71, cost per 100 cases 59.2 to 47.4."
+Most honest probabilities: Random Forest (Brier 0.153); Naive Bayes has Brier 0.179 and calibration error 0.173.
+"The input that most separates caught from missed heart disease is ST depression in exercise: average 1.7 when caught, 0.233 when missed."
+When Naive Bayes is at least 90% sure it is right 83% of the time (78% of test cases).

@@ -23,6 +23,7 @@ from disease_risk.explain import patient_evidence
 from disease_risk.report import FOLDER, results_sections
 from disease_risk.spec import HEART_SPEC
 from pxlab.app import (
+    cutoff_choice,
     input_form,
     probability_bar,
     setup_page,
@@ -91,9 +92,14 @@ def show_assess_page(model_info, models, test):
     disease_column = list(pipeline.classes_).index("heart disease")
     chance = float(pipeline.predict_proba(patient)[0, disease_column])
     with right:
-        st.subheader("Heart disease likely" if chance >= 0.5 else "Heart disease unlikely", anchor=False)
+        cutoff = cutoff_choice(model_info, model_name, key=f"cutoff-{model_name}")
+        st.subheader("Heart disease likely" if chance >= cutoff else "Heart disease unlikely", anchor=False)
         st.markdown(f"Model's chance of heart disease **{chance:.0%}**")
-        probability_bar(chance, threshold=0.5)
+        probability_bar(chance, threshold=cutoff)
+        st.caption(
+            f"Flagged when the chance is at least {cutoff:.0%} (the line). A missed patient counts four times a "
+            "false alarm, so the tuned cut-off flags patients earlier than 50%."
+        )
         st.caption(NOT_A_TOOL)
         if model_name == "Naive Bayes":
             st.subheader("What pushed it", anchor=False)

@@ -34,6 +34,7 @@ Sex is kept: heart disease rates differ between men and women, and leaving it ou
 6. **Cut-offs**: missed patients and false alarms at cut-offs from 20% to 70%, for both main models.
 7. **Other hospitals**: the Cleveland-trained models scored on all patients from Budapest, Zurich and Basel, and Long Beach, with the share of missing values per input at each hospital.
 8. **Explanations**: the tree's full rules and its top three levels; for Naive Bayes, per-patient evidence (the log ratio of each input's chance under heart disease and under no disease); permutation importance on the test set, 10 shuffles per input.
+9. **In-depth analysis** (`pxlab.tabular.study`): 1,000-round bootstrap 95% intervals for the headline test scores, next to a baseline that ignores the inputs; McNemar's test of the best model against each other model; learning curves; a cut-off chosen on cross-validated training predictions for the lowest cost (a missed patient costs 4, a false alarm costs 1, an assumption stated in the SPEC) and then checked on the test set; a reliability diagram, Brier score and a recalibrated copy of the best model; and an error analysis that compares the inputs of caught, missed and falsely flagged cases and shows how accuracy depends on the model's confidence. Each finding is one sentence in `outputs/heart/key_findings.csv`.
 
 ## Limits
 

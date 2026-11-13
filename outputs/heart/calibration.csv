@@ -1,0 +1,6 @@
+Model,Brier score,Calibration error,Mean predicted,Real positive share
+Decision Tree,0.1908,0.1088,0.439,0.4605
+Naive Bayes,0.1786,0.1726,0.4319,0.4605
+Random Forest,0.1532,0.1233,0.4403,0.4605
+Always healthy,0.4605,0.4605,0.0,0.4605
+Naive Bayes recalibrated (sigmoid),0.1597,0.0592,0.4406,0.4605

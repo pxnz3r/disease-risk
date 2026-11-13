@@ -1,0 +1,13 @@
+Model,Score,Test value,Low,High
+Decision Tree,Accuracy,0.75,0.6579,0.8421
+Decision Tree,F1,0.6984,0.5573,0.8169
+Decision Tree,ROC-AUC,0.7774,0.6669,0.8717
+Naive Bayes,Accuracy,0.8026,0.7105,0.8947
+Naive Bayes,F1,0.7692,0.6428,0.8696
+Naive Bayes,ROC-AUC,0.8641,0.7785,0.9363
+Random Forest,Accuracy,0.7895,0.6974,0.8816
+Random Forest,F1,0.7419,0.6101,0.8571
+Random Forest,ROC-AUC,0.8648,0.7821,0.9355
+Always healthy,Accuracy,0.5395,0.4211,0.6447
+Always healthy,F1,0.0,0.0,0.0
+Always healthy,ROC-AUC,0.5,0.5,0.5

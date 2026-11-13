@@ -19,7 +19,140 @@ Produced by `python main.py`. The test set is 25% of the Cleveland patients, str
 
 ![roc curves](../outputs/figures/heart/roc_curves.png)
 
-## Cut-off
+## Key findings
+
+### What the in-depth analysis found
+
+| Finding |
+| --- |
+| Naive Bayes scores ROC-AUC 0.864 on the test set (95% interval 0.778 to 0.936); the baseline that ignores the inputs (Always healthy) scores 0.500. |
+| Naive Bayes against Decision Tree on right or wrong answers (McNemar): could be chance (p = 0.455). |
+| Naive Bayes against Random Forest on right or wrong answers (McNemar): could be chance (p = 1.000). |
+| Naive Bayes against Always healthy on right or wrong answers (McNemar): real difference (p = 0.000). |
+| Decision Tree generalises well: training and validation roc auc are close (+0.051); validation is still rising, so more data would likely help. |
+| Naive Bayes generalises well: training and validation roc auc are close (+0.013); validation has levelled off, so more data alone would help little. |
+| Random Forest generalises well: training and validation roc auc are close (+0.040); validation has levelled off, so more data alone would help little. |
+| Cut-off for Naive Bayes: 0.12 instead of 0.5, chosen for the lowest cost. On the test set: recall 0.71 to 0.83, precision 0.83 to 0.71, cost per 100 cases 59.2 to 47.4. |
+| Most honest probabilities: Random Forest (Brier 0.153); Naive Bayes has Brier 0.179 and calibration error 0.173. |
+| The input that most separates caught from missed heart disease is ST depression in exercise: average 1.7 when caught, 0.233 when missed. |
+| When Naive Bayes is at least 90% sure it is right 83% of the time (78% of test cases). |
+
+## Reliability
+
+Bootstrap 95% intervals: how much each test score could move with a different test sample.
+
+![confidence intervals](../outputs/figures/heart/confidence_intervals.png)
+
+### Confidence intervals
+
+| Model | Score | Test value | Low | High |
+| --- | --- | --- | --- | --- |
+| Decision Tree | Accuracy | 0.75 | 0.6579 | 0.8421 |
+| Decision Tree | F1 | 0.6984 | 0.5573 | 0.8169 |
+| Decision Tree | ROC-AUC | 0.7774 | 0.6669 | 0.8717 |
+| Naive Bayes | Accuracy | 0.8026 | 0.7105 | 0.8947 |
+| Naive Bayes | F1 | 0.7692 | 0.6428 | 0.8696 |
+| Naive Bayes | ROC-AUC | 0.8641 | 0.7785 | 0.9363 |
+| Random Forest | Accuracy | 0.7895 | 0.6974 | 0.8816 |
+| Random Forest | F1 | 0.7419 | 0.6101 | 0.8571 |
+| Random Forest | ROC-AUC | 0.8648 | 0.7821 | 0.9355 |
+| Always healthy | Accuracy | 0.5395 | 0.4211 | 0.6447 |
+| Always healthy | F1 | 0.0 | 0.0 | 0.0 |
+| Always healthy | ROC-AUC | 0.5 | 0.5 | 0.5 |
+
+### Is the best model really better? (paired tests)
+
+| Best model | Compared with | Best is better on | Other is better on | Test | p-value | Verdict |
+| --- | --- | --- | --- | --- | --- | --- |
+| Naive Bayes | Decision Tree | 10 | 6 | McNemar | 0.4545 | Could be chance |
+| Naive Bayes | Random Forest | 4 | 3 | McNemar | 1.0 | Could be chance |
+| Naive Bayes | Always healthy | 25 | 5 | McNemar | 0.0003 | Real difference |
+
+![learning curves](../outputs/figures/heart/learning_curves.png)
+
+### Learning curves
+
+| Model | Training rows | Training score | Validation score |
+| --- | --- | --- | --- |
+| Decision Tree | 27 | 0.8305 | 0.7148 |
+| Decision Tree | 57 | 0.9164 | 0.7809 |
+| Decision Tree | 88 | 0.9216 | 0.8203 |
+| Decision Tree | 119 | 0.9249 | 0.8478 |
+| Decision Tree | 150 | 0.933 | 0.8505 |
+| Decision Tree | 181 | 0.9273 | 0.8764 |
+| Naive Bayes | 27 | 0.9846 | 0.9103 |
+| Naive Bayes | 57 | 0.9539 | 0.9168 |
+| Naive Bayes | 88 | 0.9451 | 0.9221 |
+| Naive Bayes | 119 | 0.936 | 0.9133 |
+| Naive Bayes | 150 | 0.9377 | 0.9163 |
+| Naive Bayes | 181 | 0.9308 | 0.9175 |
+| Random Forest | 27 | 0.8925 | 0.7958 |
+| Random Forest | 57 | 0.9506 | 0.9115 |
+| Random Forest | 88 | 0.9555 | 0.913 |
+| Random Forest | 119 | 0.951 | 0.9158 |
+| Random Forest | 150 | 0.9562 | 0.9141 |
+| Random Forest | 181 | 0.9529 | 0.9125 |
+
+## Cut-off and calibration
+
+The cut-off is chosen on cross-validated training predictions, then checked on the test set. Costs: a false alarm costs 1, a miss costs 4. An assumption for this demo: a missed patient goes untreated, a false alarm costs one more test.
+
+![threshold curve](../outputs/figures/heart/threshold_curve.png)
+
+### Default against tuned cut-off on the test set
+
+| Model | Cut-off | Threshold | Precision | Recall | F1 | Accuracy | Cost per 100 cases | TP | FP | FN | TN |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Decision Tree | Default | 0.5 | 0.786 | 0.629 | 0.698 | 0.75 | 76.316 | 22 | 6 | 13 | 35 |
+| Decision Tree | Tuned | 0.19 | 0.596 | 0.8 | 0.683 | 0.658 | 61.842 | 28 | 19 | 7 | 22 |
+| Naive Bayes | Default | 0.5 | 0.833 | 0.714 | 0.769 | 0.803 | 59.211 | 25 | 5 | 10 | 36 |
+| Naive Bayes | Tuned | 0.12 | 0.707 | 0.829 | 0.763 | 0.763 | 47.368 | 29 | 12 | 6 | 29 |
+| Random Forest | Default | 0.5 | 0.852 | 0.657 | 0.742 | 0.789 | 68.421 | 23 | 4 | 12 | 37 |
+| Random Forest | Tuned | 0.28 | 0.633 | 0.886 | 0.738 | 0.711 | 44.737 | 31 | 18 | 4 | 23 |
+| Always healthy | Default | 0.5 | 0.0 | 0.0 | 0.0 | 0.539 | 184.211 | 0 | 0 | 35 | 41 |
+| Always healthy | Tuned | 0.02 | 0.0 | 0.0 | 0.0 | 0.539 | 184.211 | 0 | 0 | 35 | 41 |
+
+![reliability](../outputs/figures/heart/reliability.png)
+
+### How honest the probabilities are
+
+| Model | Brier score | Calibration error | Mean predicted | Real positive share |
+| --- | --- | --- | --- | --- |
+| Decision Tree | 0.1908 | 0.1088 | 0.439 | 0.4605 |
+| Naive Bayes | 0.1786 | 0.1726 | 0.4319 | 0.4605 |
+| Random Forest | 0.1532 | 0.1233 | 0.4403 | 0.4605 |
+| Always healthy | 0.4605 | 0.4605 | 0.0 | 0.4605 |
+| Naive Bayes recalibrated (sigmoid) | 0.1597 | 0.0592 | 0.4406 | 0.4605 |
+
+## Error analysis
+
+![error groups](../outputs/figures/heart/error_groups.png)
+
+### Average inputs per outcome group
+
+| Input | Caught heart disease (TP) | Missed heart disease (FN) | False alarm (FP) | Correct negative (TN) |
+| --- | --- | --- | --- | --- |
+| Cases | 29.0 | 6.0 | 12.0 | 29.0 |
+| Major vessels seen in fluoroscopy (0 to 3) | 1.286 | 0.667 | 0.0 | 0.172 |
+| ST depression in exercise | 1.7 | 0.233 | 0.95 | 0.441 |
+| Highest heart rate in exercise test | 137.276 | 161.833 | 145.583 | 163.276 |
+| Age | 56.931 | 53.667 | 58.75 | 50.931 |
+| Resting blood pressure (mm Hg) | 139.69 | 141.0 | 127.167 | 128.241 |
+| Cholesterol (mg/dl) | 258.621 | 256.0 | 276.333 | 240.069 |
+
+![confidence](../outputs/figures/heart/confidence.png)
+
+### Accuracy by confidence
+
+| Confidence | Cases | Share of the test set | Accuracy |
+| --- | --- | --- | --- |
+| 0% to 60% | 6 | 0.079 | 0.833 |
+| 60% to 70% | 5 | 0.066 | 0.6 |
+| 70% to 80% | 3 | 0.039 | 0.667 |
+| 80% to 90% | 3 | 0.039 | 0.667 |
+| 90% to 100% | 59 | 0.776 | 0.831 |
+
+## Cut-off table
 
 Patients flagged, missed and falsely alarmed on the test set as the cut-off moves.
 

@@ -63,6 +63,13 @@ HEART_SPEC = {
     },
     "test_size": 0.25,
     "scoring": "roc_auc",
+    # Missing a sick patient (false negative) is assumed four times as bad
+    # as a false alarm. The cut-off is tuned for it.
+    "error_costs": {
+        "false_positive": 1,
+        "false_negative": 4,
+        "reason": "An assumption for this demo: a missed patient goes untreated, a false alarm costs one more test.",
+    },
     "models": {
         "Decision Tree": {
             "estimator": DecisionTreeClassifier(random_state=RANDOM_STATE),

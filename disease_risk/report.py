@@ -3,6 +3,9 @@ report.py - which saved tables and figures make up the results. The app's
 Results tab and docs/results.md both read this list, so they always match.
 """
 
+from disease_risk.spec import HEART_SPEC
+from pxlab.tabular.study import study_sections
+
 FOLDER = "heart"
 
 
@@ -23,8 +26,9 @@ def results_sections():
                 ("figure", f"{FOLDER}/roc_curves.png"),
             ],
         ),
+        *study_sections(HEART_SPEC, FOLDER),
         (
-            "Cut-off",
+            "Cut-off table",
             [
                 ("text", "Patients flagged, missed and falsely alarmed on the test set as the cut-off moves."),
                 ("table", "Naive Bayes", f"{FOLDER}/cutoffs_naive_bayes.csv"),
