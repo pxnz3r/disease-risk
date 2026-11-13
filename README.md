@@ -1,10 +1,30 @@
-# Disease risk
+<div align="center">
 
-Estimates whether a patient has heart disease with a Decision Tree and Naive Bayes, and tests how far that holds: at other cut-offs and at other hospitals. Built on the UCI Heart Disease data, with an interactive demo that explains each verdict.
+<h1>Disease risk</h1>
 
-**Educational only. Not a medical tool.**
+<p>Estimates whether a patient has heart disease with a Decision Tree and Naive Bayes, and tests how far that holds: at other cut-offs and at other hospitals. Built on the UCI Heart Disease data, with an interactive demo that explains each verdict.
 
-![Top three levels of the Decision Tree](outputs/figures/heart/decision_tree.png)
+**Educational only. Not a medical tool.**</p>
+
+<p>
+<a href="https://github.com/pxnz3r/disease-risk/actions/workflows/ci.yml"><img src="https://github.com/pxnz3r/disease-risk/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+<img src="https://img.shields.io/badge/python-3.14-blue" alt="Python 3.14">
+<a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-green" alt="MIT license"></a>
+</p>
+
+<p><a href="docs/results.md">Results</a> · <a href="docs/methodology.md">Methodology</a> · <a href="docs/deploy.md">Deploy the demo</a></p>
+
+<img src="outputs/figures/heart/decision_tree.png" width="720" alt="Top three levels of the Decision Tree">
+
+</div>
+
+## How it works
+
+1. **Load and check** the UCI Heart Disease data from four hospitals.
+2. **Tune** a Decision Tree and Naive Bayes with cross-validation on Cleveland Clinic patients, then test again at three other hospitals.
+3. **Test how sure the scores are** with bootstrap intervals, a paired test against every rival, learning curves and a baseline that ignores the inputs.
+4. **Pick the cut-off** at the lowest cost, assuming a missed patient is four times worse than a false alarm, and check calibration.
+5. **Study who gets missed** and **try it** in the Streamlit demo, which uses the tuned cut-off.
 
 ## Results
 
@@ -33,6 +53,20 @@ Recall and precision are for heart disease.
 At Zurich, Basel and Long Beach most scans weren't recorded and most patients were sick, so the Cleveland rules fit poorly.
 
 Full tables and figures: [docs/results.md](docs/results.md). How it was done and the limits: [docs/methodology.md](docs/methodology.md).
+
+## How sure the results are
+
+**Naive Bayes is good but not clearly best.** Test ROC-AUC 0.864 (95% interval 0.778 to 0.936). Against the tree p = 0.455 and against the forest p = 1.0: with 76 test patients the three cannot be told apart.
+
+**No model overfits.** Training and validation ROC-AUC are within 0.05 for all three.
+
+**The cut-off drops to 0.12.** Assuming a missed patient is 4 times worse than a false alarm, recall rises from 0.71 to 0.83 and the cost per 100 patients falls from 59.2 to 47.4.
+
+**Naive Bayes is overconfident.** Its calibration error is 0.173; the forest gives the most honest chances (Brier 0.153 against 0.179).
+
+**Missed patients look healthy on the treadmill.** ST depression in exercise averages 1.7 for caught patients and 0.23 for missed ones.
+
+Every table and figure behind these is in [docs/results.md](docs/results.md).
 
 ## Run it
 
