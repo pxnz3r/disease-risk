@@ -1,0 +1,13 @@
+Hospital,Patients,With heart disease,Model,Accuracy,Recall,ROC-AUC
+Hungarian Institute of Cardiology (Budapest),294,0.361,Decision Tree,0.813,0.613,0.83
+Hungarian Institute of Cardiology (Budapest),294,0.361,Naive Bayes,0.85,0.708,0.905
+Hungarian Institute of Cardiology (Budapest),294,0.361,Random Forest,0.82,0.594,0.9
+Hungarian Institute of Cardiology (Budapest),294,0.361,Always healthy,0.639,0.0,0.5
+University Hospitals (Zurich and Basel),123,0.935,Decision Tree,0.463,0.452,0.691
+University Hospitals (Zurich and Basel),123,0.935,Naive Bayes,0.699,0.704,0.768
+University Hospitals (Zurich and Basel),123,0.935,Random Forest,0.561,0.539,0.791
+University Hospitals (Zurich and Basel),123,0.935,Always healthy,0.065,0.0,0.5
+"VA Medical Center (Long Beach, US)",200,0.745,Decision Tree,0.615,0.591,0.645
+"VA Medical Center (Long Beach, US)",200,0.745,Naive Bayes,0.61,0.57,0.721
+"VA Medical Center (Long Beach, US)",200,0.745,Random Forest,0.58,0.483,0.728
+"VA Medical Center (Long Beach, US)",200,0.745,Always healthy,0.255,0.0,0.5

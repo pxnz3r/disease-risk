@@ -1,0 +1,22 @@
+|--- Chest pain type is not No chest pain
+|   |--- Thallium heart scan is not Normal
+|   |   |--- Highest heart rate in exercise test <= 143.00
+|   |   |   |--- class: heart disease
+|   |   |--- Highest heart rate in exercise test >  143.00
+|   |   |   |--- class: no disease
+|   |--- Thallium heart scan is Normal
+|   |   |--- Highest heart rate in exercise test <= 162.50
+|   |   |   |--- class: no disease
+|   |   |--- Highest heart rate in exercise test >  162.50
+|   |   |   |--- class: no disease
+|--- Chest pain type is No chest pain
+|   |--- ST depression in exercise <= 0.70
+|   |   |--- Major vessels seen in fluoroscopy (0 to 3) <= 0.50
+|   |   |   |--- class: no disease
+|   |   |--- Major vessels seen in fluoroscopy (0 to 3) >  0.50
+|   |   |   |--- class: heart disease
+|   |--- ST depression in exercise >  0.70
+|   |   |--- Thallium heart scan is not Reversible defect
+|   |   |   |--- class: heart disease
+|   |   |--- Thallium heart scan is Reversible defect
+|   |   |   |--- class: heart disease

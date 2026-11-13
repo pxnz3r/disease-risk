@@ -1,0 +1,15 @@
+Column,Type,Missing,Distinct values
+age,numeric,0,41
+resting_blood_pressure,numeric,0,50
+cholesterol,numeric,0,152
+max_heart_rate,numeric,0,91
+st_depression,numeric,0,40
+major_vessels,numeric,4,4
+sex,category,0,2
+chest_pain,category,0,4
+high_fasting_sugar,category,0,2
+resting_ecg,category,0,3
+exercise_angina,category,0,2
+st_slope,category,0,3
+thallium_scan,category,2,3
+diagnosis,target,0,2

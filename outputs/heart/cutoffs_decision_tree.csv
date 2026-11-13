@@ -1,0 +1,7 @@
+Cut-off,Flagged,"Missed (sick, not flagged)","False alarms (healthy, flagged)",Recall,Precision
+0.2,47,7,19,0.8,0.596
+0.3,47,7,19,0.8,0.596
+0.4,28,13,6,0.629,0.786
+0.5,28,13,6,0.629,0.786
+0.6,28,13,6,0.629,0.786
+0.7,28,13,6,0.629,0.786

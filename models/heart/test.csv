@@ -1,0 +1,77 @@
+age,resting_blood_pressure,cholesterol,max_heart_rate,st_depression,major_vessels,sex,chest_pain,high_fasting_sugar,resting_ecg,exercise_angina,st_slope,thallium_scan,diagnosis
+70.0,160.0,269.0,112.0,2.9,1.0,Male,Non-anginal pain,120 mg/dl or below,Normal,Yes,Flat,Reversible defect,heart disease
+54.0,110.0,239.0,126.0,2.8,1.0,Male,No chest pain,120 mg/dl or below,Normal,Yes,Flat,Reversible defect,heart disease
+57.0,154.0,232.0,164.0,0.0,1.0,Male,Atypical angina,120 mg/dl or below,Enlarged left ventricle,No,Rising,Normal,heart disease
+57.0,120.0,354.0,163.0,0.6,0.0,Female,No chest pain,120 mg/dl or below,Normal,Yes,Rising,Normal,no disease
+57.0,110.0,201.0,126.0,1.5,0.0,Male,No chest pain,120 mg/dl or below,Normal,Yes,Flat,Fixed defect,no disease
+56.0,200.0,288.0,133.0,4.0,2.0,Female,No chest pain,Above 120 mg/dl,Enlarged left ventricle,Yes,Falling,Reversible defect,heart disease
+52.0,152.0,298.0,178.0,1.2,0.0,Male,Typical angina,Above 120 mg/dl,Normal,No,Flat,Reversible defect,no disease
+48.0,130.0,245.0,180.0,0.2,0.0,Male,Atypical angina,120 mg/dl or below,Enlarged left ventricle,No,Flat,Normal,no disease
+59.0,160.0,273.0,125.0,0.0,0.0,Male,Typical angina,120 mg/dl or below,Enlarged left ventricle,No,Rising,Normal,heart disease
+58.0,128.0,259.0,130.0,3.0,2.0,Male,No chest pain,120 mg/dl or below,Enlarged left ventricle,Yes,Flat,Reversible defect,heart disease
+35.0,126.0,282.0,156.0,0.0,0.0,Male,No chest pain,120 mg/dl or below,Enlarged left ventricle,Yes,Rising,Reversible defect,heart disease
+67.0,152.0,277.0,172.0,0.0,1.0,Female,Non-anginal pain,120 mg/dl or below,Normal,No,Rising,Normal,no disease
+42.0,120.0,209.0,173.0,0.0,0.0,Female,Non-anginal pain,120 mg/dl or below,Normal,No,Flat,Normal,no disease
+54.0,108.0,309.0,156.0,0.0,0.0,Male,Atypical angina,120 mg/dl or below,Normal,No,Rising,Reversible defect,no disease
+57.0,150.0,276.0,112.0,0.6,1.0,Male,No chest pain,120 mg/dl or below,Enlarged left ventricle,Yes,Flat,Fixed defect,heart disease
+35.0,122.0,192.0,174.0,0.0,0.0,Male,Atypical angina,120 mg/dl or below,Normal,No,Rising,Normal,no disease
+58.0,150.0,283.0,162.0,1.0,0.0,Female,Typical angina,Above 120 mg/dl,Enlarged left ventricle,No,Rising,Normal,no disease
+53.0,130.0,197.0,152.0,1.2,0.0,Male,Non-anginal pain,Above 120 mg/dl,Enlarged left ventricle,No,Falling,Normal,no disease
+49.0,130.0,266.0,171.0,0.6,0.0,Male,Atypical angina,120 mg/dl or below,Normal,No,Rising,Normal,no disease
+67.0,115.0,564.0,160.0,1.6,0.0,Female,Non-anginal pain,120 mg/dl or below,Enlarged left ventricle,No,Flat,Reversible defect,no disease
+35.0,138.0,183.0,182.0,1.4,0.0,Female,No chest pain,120 mg/dl or below,Normal,No,Rising,Normal,no disease
+62.0,138.0,294.0,106.0,1.9,3.0,Female,No chest pain,Above 120 mg/dl,Normal,No,Flat,Normal,heart disease
+43.0,115.0,303.0,181.0,1.2,0.0,Male,No chest pain,120 mg/dl or below,Normal,No,Flat,Normal,no disease
+45.0,138.0,236.0,152.0,0.2,0.0,Female,No chest pain,120 mg/dl or below,Enlarged left ventricle,Yes,Flat,Normal,no disease
+53.0,130.0,264.0,143.0,0.4,0.0,Female,No chest pain,120 mg/dl or below,Enlarged left ventricle,No,Flat,Normal,no disease
+71.0,112.0,149.0,125.0,1.6,0.0,Female,No chest pain,120 mg/dl or below,Normal,No,Flat,Normal,no disease
+61.0,145.0,307.0,146.0,1.0,0.0,Female,No chest pain,120 mg/dl or below,Enlarged left ventricle,Yes,Flat,Reversible defect,heart disease
+40.0,152.0,223.0,181.0,0.0,0.0,Male,No chest pain,120 mg/dl or below,Normal,No,Rising,Reversible defect,heart disease
+59.0,150.0,212.0,157.0,1.6,0.0,Male,Non-anginal pain,Above 120 mg/dl,Normal,No,Rising,Normal,no disease
+61.0,134.0,234.0,145.0,2.6,2.0,Male,Typical angina,120 mg/dl or below,Normal,No,Flat,Normal,heart disease
+60.0,140.0,185.0,155.0,3.0,0.0,Male,Non-anginal pain,120 mg/dl or below,Enlarged left ventricle,No,Flat,Normal,heart disease
+43.0,132.0,247.0,143.0,0.1,,Male,No chest pain,Above 120 mg/dl,Enlarged left ventricle,Yes,Flat,Reversible defect,heart disease
+54.0,110.0,214.0,158.0,1.6,0.0,Female,Non-anginal pain,120 mg/dl or below,Normal,No,Flat,Normal,no disease
+58.0,125.0,300.0,171.0,0.0,2.0,Male,No chest pain,120 mg/dl or below,Enlarged left ventricle,No,Rising,Reversible defect,heart disease
+58.0,150.0,270.0,111.0,0.8,0.0,Male,No chest pain,120 mg/dl or below,Enlarged left ventricle,Yes,Rising,Reversible defect,heart disease
+46.0,140.0,311.0,120.0,1.8,2.0,Male,No chest pain,120 mg/dl or below,Normal,Yes,Flat,Reversible defect,heart disease
+54.0,160.0,201.0,163.0,0.0,1.0,Female,Non-anginal pain,120 mg/dl or below,Normal,No,Rising,Normal,no disease
+67.0,125.0,254.0,163.0,0.2,2.0,Male,No chest pain,Above 120 mg/dl,Normal,No,Flat,Reversible defect,heart disease
+41.0,110.0,235.0,153.0,0.0,0.0,Male,Atypical angina,120 mg/dl or below,Normal,No,Rising,Normal,no disease
+43.0,122.0,213.0,165.0,0.2,0.0,Female,Non-anginal pain,120 mg/dl or below,Normal,No,Flat,Normal,no disease
+54.0,120.0,258.0,147.0,0.4,0.0,Male,Non-anginal pain,120 mg/dl or below,Enlarged left ventricle,No,Flat,Reversible defect,no disease
+52.0,118.0,186.0,190.0,0.0,0.0,Male,Typical angina,120 mg/dl or below,Enlarged left ventricle,No,Flat,Fixed defect,no disease
+63.0,130.0,330.0,132.0,1.8,3.0,Male,No chest pain,Above 120 mg/dl,Enlarged left ventricle,Yes,Rising,Reversible defect,heart disease
+51.0,110.0,175.0,123.0,0.6,0.0,Male,Non-anginal pain,120 mg/dl or below,Normal,No,Rising,Normal,no disease
+50.0,140.0,233.0,163.0,0.6,1.0,Male,Non-anginal pain,120 mg/dl or below,Normal,No,Flat,Reversible defect,heart disease
+39.0,140.0,321.0,182.0,0.0,0.0,Male,Non-anginal pain,120 mg/dl or below,Enlarged left ventricle,No,Rising,Normal,no disease
+60.0,130.0,253.0,144.0,1.4,1.0,Male,No chest pain,120 mg/dl or below,Normal,Yes,Rising,Reversible defect,heart disease
+67.0,152.0,212.0,150.0,0.8,0.0,Male,Non-anginal pain,120 mg/dl or below,Enlarged left ventricle,No,Flat,Reversible defect,heart disease
+44.0,112.0,290.0,153.0,0.0,1.0,Male,No chest pain,120 mg/dl or below,Enlarged left ventricle,No,Rising,Normal,heart disease
+57.0,132.0,207.0,168.0,0.0,0.0,Male,No chest pain,120 mg/dl or below,Normal,Yes,Rising,Reversible defect,no disease
+55.0,180.0,327.0,117.0,3.4,0.0,Female,No chest pain,120 mg/dl or below,ST-T wave abnormality,Yes,Flat,Normal,heart disease
+42.0,136.0,315.0,125.0,1.8,0.0,Male,No chest pain,120 mg/dl or below,Normal,Yes,Flat,Fixed defect,heart disease
+65.0,140.0,417.0,157.0,0.8,1.0,Female,Non-anginal pain,Above 120 mg/dl,Enlarged left ventricle,No,Rising,Normal,no disease
+63.0,140.0,187.0,144.0,4.0,2.0,Male,No chest pain,120 mg/dl or below,Enlarged left ventricle,Yes,Rising,Reversible defect,heart disease
+66.0,120.0,302.0,151.0,0.4,0.0,Male,No chest pain,120 mg/dl or below,Enlarged left ventricle,No,Flat,Normal,no disease
+59.0,170.0,288.0,159.0,0.2,0.0,Male,Typical angina,120 mg/dl or below,Enlarged left ventricle,No,Flat,Reversible defect,heart disease
+62.0,140.0,394.0,157.0,1.2,0.0,Female,No chest pain,120 mg/dl or below,Enlarged left ventricle,No,Flat,Normal,no disease
+49.0,134.0,271.0,162.0,0.0,0.0,Female,Atypical angina,120 mg/dl or below,Normal,No,Flat,Normal,no disease
+49.0,118.0,149.0,126.0,0.8,3.0,Male,Non-anginal pain,120 mg/dl or below,Enlarged left ventricle,No,Rising,Normal,heart disease
+63.0,145.0,233.0,150.0,2.3,0.0,Male,Typical angina,Above 120 mg/dl,Enlarged left ventricle,No,Falling,Fixed defect,no disease
+46.0,120.0,249.0,144.0,0.8,0.0,Male,No chest pain,120 mg/dl or below,Enlarged left ventricle,No,Rising,Reversible defect,heart disease
+56.0,130.0,221.0,163.0,0.0,0.0,Male,Atypical angina,120 mg/dl or below,Enlarged left ventricle,No,Rising,Reversible defect,no disease
+54.0,108.0,267.0,167.0,0.0,0.0,Female,Non-anginal pain,120 mg/dl or below,Enlarged left ventricle,No,Rising,Normal,no disease
+67.0,120.0,229.0,129.0,2.6,2.0,Male,No chest pain,120 mg/dl or below,Enlarged left ventricle,Yes,Flat,Reversible defect,heart disease
+60.0,120.0,178.0,96.0,0.0,0.0,Female,Non-anginal pain,Above 120 mg/dl,Normal,No,Rising,Normal,no disease
+56.0,120.0,240.0,169.0,0.0,0.0,Male,Atypical angina,120 mg/dl or below,Normal,No,Falling,Normal,no disease
+53.0,142.0,226.0,111.0,0.0,0.0,Male,No chest pain,120 mg/dl or below,Enlarged left ventricle,Yes,Rising,Reversible defect,no disease
+63.0,108.0,269.0,169.0,1.8,2.0,Female,No chest pain,120 mg/dl or below,Normal,Yes,Flat,Normal,heart disease
+59.0,164.0,176.0,90.0,1.0,2.0,Male,No chest pain,Above 120 mg/dl,Enlarged left ventricle,No,Flat,Fixed defect,heart disease
+63.0,140.0,195.0,179.0,0.0,2.0,Female,Atypical angina,120 mg/dl or below,Normal,No,Rising,Normal,no disease
+62.0,140.0,268.0,160.0,3.6,2.0,Female,No chest pain,120 mg/dl or below,Enlarged left ventricle,No,Falling,Normal,heart disease
+41.0,120.0,157.0,182.0,0.0,0.0,Male,Atypical angina,120 mg/dl or below,Normal,No,Rising,Normal,no disease
+57.0,130.0,236.0,174.0,0.0,1.0,Female,Atypical angina,120 mg/dl or below,Enlarged left ventricle,No,Flat,Normal,heart disease
+46.0,142.0,177.0,160.0,1.4,0.0,Female,Non-anginal pain,120 mg/dl or below,Enlarged left ventricle,Yes,Falling,Normal,no disease
+58.0,100.0,248.0,122.0,1.0,0.0,Female,No chest pain,120 mg/dl or below,Enlarged left ventricle,No,Flat,Normal,no disease
+65.0,138.0,282.0,174.0,1.4,1.0,Male,Typical angina,Above 120 mg/dl,Enlarged left ventricle,No,Flat,Normal,heart disease

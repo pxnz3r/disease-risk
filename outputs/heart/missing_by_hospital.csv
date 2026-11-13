@@ -1,0 +1,14 @@
+,Cleveland Clinic (US),Hungarian Institute of Cardiology (Budapest),University Hospitals (Zurich and Basel),"VA Medical Center (Long Beach, US)"
+Age,0.0,0.0,0.0,0.0
+Resting blood pressure (mm Hg),0.0,0.0,0.02,0.28
+Cholesterol (mg/dl),0.0,0.08,1.0,0.28
+Highest heart rate in exercise test,0.0,0.0,0.01,0.26
+ST depression in exercise,0.0,0.0,0.05,0.28
+Major vessels seen in fluoroscopy (0 to 3),0.01,0.99,0.96,0.99
+Sex,0.0,0.0,0.0,0.0
+Chest pain type,0.0,0.0,0.0,0.0
+Fasting blood sugar,0.0,0.03,0.61,0.04
+Resting ECG,0.0,0.0,0.01,0.0
+Chest pain during exercise,0.0,0.0,0.01,0.26
+ST slope at peak exercise,0.0,0.65,0.14,0.51
+Thallium heart scan,0.01,0.9,0.42,0.83
